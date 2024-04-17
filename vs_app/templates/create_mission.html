@@ -1,0 +1,35 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <title>OEE</title>
+</head>
+
+<style>
+h1  {
+  margin-left:20px;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 16px;
+}
+</style>
+
+<body>
+    <div>
+    <h1>Overall Equipment Effectiveness</h1>
+    </div>
+    <div class="container">
+        {% for result in results %}
+        <ul>
+            <li>    Machine Name   :   {{ result.machine }}</li>
+            <li>    OEE            :   {{ result.oee }}</li>
+            <li>    Availability   :   {{ result.availability }}</li>
+            <li>    Performance    :   {{ result.performance }}</li>
+            <li>    Quality        :   {{ result.quality }}</li>
+        </ul>    
+        {% endfor %}
+        
+    </div>
+</body>
+</html>
